@@ -12,11 +12,10 @@ $(function() {
     $.ajax("/api/burgers", {
       type: "POST",
       data: newBurger
-      location.reload()
     }).then(
       function() {
         console.log("Added new burger ", newBurger);
-        location.reload("/");
+        location.reload();
       }
     );
   });
