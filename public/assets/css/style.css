@@ -1,0 +1,25 @@
+
+body{
+  background-color: #e19737;
+}
+
+ul {
+  padding: 5px;
+  margin: 5px;
+  background: #e19737;
+  color:blue;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
