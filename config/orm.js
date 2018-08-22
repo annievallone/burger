@@ -18,16 +18,15 @@ var orm = {
       cb(result)
     });
   },
-  updateOne: function(tableInput, objCol, condition) {
+  updateOne: function(objCol, eatenState, condition, cb) {
     var queryString = "UPDATE burgers SET ?? = ? where id = ?;";
     console.log(queryString);
 
-    connection.query(queryString, [tableInput, objCol, condition], function(
-      err,
-      result
-    ) {
+    connection.query(queryString, [objCol, eatenState, condition], function(err, result) {
+
       if (err) throw err;
       console.log(result);
+      cb();
     });
   }
 };
