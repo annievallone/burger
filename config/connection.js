@@ -9,7 +9,7 @@ var connection;
 // });
 
 
-if (ProcessingInstruction.env.JAWSDB_URL) {
+if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
   connection = mysql.createConnection({
@@ -18,7 +18,7 @@ if (ProcessingInstruction.env.JAWSDB_URL) {
     user: 'root', 
     password: 'root',
     database: 'burgers_db'
-  })
+  });
 }
 
 connection.connect(function(err) {
